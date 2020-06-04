@@ -1,0 +1,11 @@
+{
+  "name": "leaflet-demo-region",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Fabian815/leaflet-demo-region.git",
+  "author": "Fabian815 <1132259823@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.6.0"
+  }
+}
