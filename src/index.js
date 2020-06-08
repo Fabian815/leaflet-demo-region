@@ -112,7 +112,7 @@ function Entry() {
       mapProvinceProjectNumber.forEach((value, key) => {
         let province = PcasLatlon[key];
         if (province) {
-          let popup= L.popup({closeButton:false,autoClose:false,closeOnClick:false}).setLatLng(province.latlon).setContent(`${key}：${value}`).openOn(this.map)
+          let popup= L.popup({closeButton:false,autoClose:false,closeOnClick:false,autoPan:false}).setLatLng(province.latlon).setContent(`${key}：${value}`).openOn(this.map)
           ;
           this.currentAdministrationPopup.push(popup);
         }
@@ -134,7 +134,7 @@ function Entry() {
         let cityName = provinceAndCity[1];
         let city = PcasLatlon[provinceName][cityName];
         if (city) {
-          let popup = L.popup({closeButton:false,autoClose:false,closeOnClick:false}).setLatLng(city.latlon).setContent(`${key}：${value}`).openOn(this.map);
+          let popup = L.popup({closeButton:false,autoClose:false,closeOnClick:false,autoPan:false}).setLatLng(city.latlon).setContent(`${key}：${value}`).openOn(this.map);
           this.currentAdministrationPopup.push(popup);
         }
       });
@@ -156,7 +156,7 @@ function Entry() {
         let areaName = provinceAndCityAndArea[2];
         let area = PcasLatlon[provinceName][cityName][areaName];
         if (area) {
-          let popup = L.popup({closeButton:false,autoClose:false,closeOnClick:false}).setLatLng(area.latlon).setContent(`${key}：${value}`).openOn(this.map);
+          let popup = L.popup({closeButton:false,autoClose:false,closeOnClick:false,autoPan:false}).setLatLng(area.latlon).setContent(`${key}：${value}`).openOn(this.map);
           this.currentAdministrationPopup.push(popup);
         }
       });
